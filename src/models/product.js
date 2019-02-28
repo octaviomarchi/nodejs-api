@@ -1,6 +1,6 @@
 'use strict';
 
-const mogoose = require('mongoose');
+const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const schema = new Schema({
@@ -11,7 +11,7 @@ const schema = new Schema({
     },
     slug: {
         type: String,
-        required: true,
+        required: [true, 'O slug é obrigatório'],
         trim: true,
         index: true,
         unique: true

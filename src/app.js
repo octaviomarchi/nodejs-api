@@ -8,7 +8,15 @@ const app = express();
 const router = express.Router();
 
 // Conecta ao banco
-mongoose.connect('mongodb+srv://admin:oCdi0FI98b9UnKow@cluster-nodejs-api-qb3el.gcp.mongodb.net/test?retryWrites=true', {useNewUrlParser: true});
+mongoose.connect(
+    'mongodb+srv://admin:oCdi0FI98b9UnKow@cluster-nodejs-api-qb3el.gcp.mongodb.net/test?retryWrites=true', 
+    {
+        useNewUrlParser: true,
+        useCreateIndex: true
+    });
+
+// Carrega os Models
+const Product = require('./models/product');
 
 //Carrega as rotas
 const indexRoute = require('./routes/index-route');
