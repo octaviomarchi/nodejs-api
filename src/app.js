@@ -13,7 +13,8 @@ mongoose.connect(
     {
         useNewUrlParser: true,
         useCreateIndex: true
-    });
+    }
+);
 
 // Carrega os Models
 const Product = require('./models/product');
