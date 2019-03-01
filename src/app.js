@@ -12,7 +12,8 @@ mongoose.connect(
     'mongodb+srv://admin:oCdi0FI98b9UnKow@cluster-nodejs-api-qb3el.gcp.mongodb.net/test?retryWrites=true', 
     {
         useNewUrlParser: true,
-        useCreateIndex: true
+        useCreateIndex: true,
+        'useFindAndModify': false
     }
 );
 
