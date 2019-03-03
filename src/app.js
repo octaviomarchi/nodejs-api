@@ -3,13 +3,13 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
+const config = require('./config');
 
 const app = express();
 const router = express.Router();
 
 // Conecta ao banco
-mongoose.connect(
-    'mongodb+srv://admin:oCdi0FI98b9UnKow@cluster-nodejs-api-qb3el.gcp.mongodb.net/test?retryWrites=true', 
+mongoose.connect(config.connectionString,
     {
         useNewUrlParser: true,
         useCreateIndex: true,
@@ -30,7 +30,7 @@ const orderRoute = require('./routes/order-route');
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
-    extended: false 
+    extended: false
 }));
 
 
