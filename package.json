@@ -18,9 +18,9 @@
     },
     "homepage": "https://github.com/octaviomarchi/NodeJS-API#readme",
     "dependencies": {
-        "body-parser": "^1.20.1",
+        "body-parser": "^1.20.3",
         "debug": "^4.3.1",
-        "express": "^4.19.2",
+        "express": "^4.21.0",
         "guid": "0.0.12",
         "http": "0.0.0",
         "jsonwebtoken": "^9.0.0",
